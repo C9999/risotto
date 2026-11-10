@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jogo da memória do Risotto</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <h1 id="title">Jogo da memória do Risotto</h1>
+    <nav>
+      <a href="#/" id="nGame">Jogar</a>
+      <a href="#/ranking" id="nRank">Ranking</a>
+      <span id="auth"></span>
+    </nav>
+  </header>
+  <p id="demo" class="demo" hidden>Modo demonstração: o ranking fica só neste navegador. Configure o Firebase em config.js para ativar o login Google e o ranking geral.</p>
+  <section id="vGame">
+    <div class="bar">
+      <span id="tm">0:00.0</span><span id="er">Erros: 0</span><span id="pr">Pares: 0</span>
+      <button id="again" type="button">Novo jogo</button>
+    </div>
+    <div class="grid" id="grid"></div>
+    <div class="panel" id="win" hidden>
+      <h2>Você terminou em <span id="wTime"></span></h2>
+      <p id="wInfo"></p>
+      <figure>
+        <img id="wPhoto" alt="Foto especial do Risotto">
+        <figcaption>Foto especial desbloqueada</figcaption>
+      </figure>
+      <label for="nm">Nome no ranking</label>
+      <input id="nm" maxlength="20" autocomplete="nickname">
+      <button id="save" type="button" class="primary">Salvar no ranking</button>
+      <p id="wMsg" role="status"></p>
+    </div>
+  </section>
+  <section id="vRank" hidden>
+    <h2>Ranking geral</h2>
+    <div id="me" class="panel" hidden>
+      <label for="nm2">Seu nome</label>
+      <input id="nm2" maxlength="20">
+      <button id="rename" type="button">Salvar nome</button>
+    </div>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>#</th><th>Nome</th><th>Tempo</th><th>Data</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+    <button id="share" type="button" class="primary">Compartilhar minha posição</button>
+    <p id="rMsg" role="status"></p>
+  </section>
+  <div id="alarm" hidden><span>Au au au au!</span><button id="stopBark" type="button">Parar latido</button></div>
+</main>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
