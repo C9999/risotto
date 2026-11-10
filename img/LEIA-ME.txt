@@ -1,0 +1,1 @@
+Adicione nesta pasta as imagens foto1.jpg a foto8.jpg e especial1.jpg a especial3.jpg. São necessárias para exibir as fotos reais do Risotto no jogo.
